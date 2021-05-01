@@ -1,0 +1,87 @@
+name: static
+version: 0.1.0
+github: "ProofOfKeags/static"
+license: MIT
+author: "Keagan (ProofOfKeags) McClelland"
+maintainer: "keagan.mcclelland@gmail.com"
+copyright: "2021 Keagan McClelland, Start9 Labs Inc."
+
+build-type: Custom
+extra-source-files:
+  - lnd/lnrpc/**/*.proto
+
+custom-setup:
+  dependencies:
+    - base
+    - Cabal
+    - proto-lens-setup
+
+build-tools: proto-lens-protoc:proto-lens-protoc
+
+# Metadata used when publishing your package
+# synopsis:            Short description of your package
+# category:            Web
+
+# To avoid duplicated efforts in documentation and dealing with the
+# complications of embedding Haddock markup inside cabal files, it is
+# common to point users to the README.md file.
+description: A power user toolkit for running a Lightning Network router.
+
+dependencies:
+  - base >= 4.7 && < 5
+  - proto-lens
+  - proto-lens-runtime
+  - proto-lens-setup
+  - Cabal
+
+library:
+  source-dirs: src
+  generated-exposed-modules:
+    - Proto.Rpc
+    - Proto.Rpc_Fields
+    - Proto.Stateservice
+    - Proto.Stateservice_Fields
+    - Proto.Walletunlocker
+    - Proto.Walletunlocker_Fields
+    - Proto.Autopilotrpc.Autopilot
+    - Proto.Autopilotrpc.Autopilot_Fields
+    - Proto.Chainrpc.Chainnotifier
+    - Proto.Chainrpc.Chainnotifier_Fields
+    - Proto.Invoicesrpc.Invoices
+    - Proto.Invoicesrpc.Invoices_Fields
+    - Proto.Lnclipb.Lncli
+    - Proto.Lnclipb.Lncli_Fields
+    - Proto.Routerrpc.Router
+    - Proto.Routerrpc.Router_Fields
+    - Proto.Signrpc.Signer
+    - Proto.Signrpc.Signer_Fields
+    - Proto.Verrpc.Verrpc
+    - Proto.Verrpc.Verrpc_Fields
+    - Proto.Walletrpc.Walletkit
+    - Proto.Walletrpc.Walletkit_Fields
+    - Proto.Watchtowerrpc.Watchtower
+    - Proto.Watchtowerrpc.Watchtower_Fields
+    - Proto.Wtclientrpc.Wtclient
+    - Proto.Wtclientrpc.Wtclient_Fields
+
+executables:
+  static-exe:
+    main: Main.hs
+    source-dirs: app
+    ghc-options:
+      - -threaded
+      - -rtsopts
+      - -with-rtsopts=-N
+    dependencies:
+      - static
+
+tests:
+  static-test:
+    main: Spec.hs
+    source-dirs: test
+    ghc-options:
+      - -threaded
+      - -rtsopts
+      - -with-rtsopts=-N
+    dependencies:
+      - static
