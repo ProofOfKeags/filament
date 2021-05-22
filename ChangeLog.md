@@ -1,3 +1,3 @@
-# Changelog for static
+# Changelog for filament
 
 ## Unreleased changes

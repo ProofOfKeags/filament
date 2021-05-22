@@ -1,14 +1,12 @@
-name: static
+name: filament
 version: 0.1.0
-github: "ProofOfKeags/static"
+github: "ProofOfKeags/filament"
 license: MIT
 author: "Keagan (ProofOfKeags) McClelland"
 maintainer: "keagan.mcclelland@gmail.com"
 copyright: "2021 Keagan McClelland, Start9 Labs Inc."
 
 build-type: Custom
-extra-source-files:
-  - lnd/lnrpc/**/*.proto
 
 custom-setup:
   dependencies:
@@ -27,12 +25,32 @@ build-tools: proto-lens-protoc:proto-lens-protoc
 # common to point users to the README.md file.
 description: A power user toolkit for running a Lightning Network router.
 
+default-extensions:
+  - NoImplicitPrelude
+  - OverloadedStrings
+  - RankNTypes
+
 dependencies:
   - base >= 4.7 && < 5
+  - bytestring
+  - data-default-class
+  - http2
+  - http2-client
+  - http2-grpc-proto-lens
+  - http2-grpc-types
+  - http2-client-grpc
+  - lens
+  - memory
+  - protolude
   - proto-lens
   - proto-lens-runtime
   - proto-lens-setup
-  - Cabal
+  - tls
+  - x509
+  - x509-store
+
+extra-source-files:
+  - lnd/lnrpc/**/*.proto
 
 library:
   source-dirs: src
@@ -65,23 +83,25 @@ library:
     - Proto.Wtclientrpc.Wtclient_Fields
 
 executables:
-  static-exe:
+  filament-exe:
     main: Main.hs
     source-dirs: app
     ghc-options:
       - -threaded
       - -rtsopts
       - -with-rtsopts=-N
+      - -fdefer-typed-holes
     dependencies:
-      - static
+      - filament
 
 tests:
-  static-test:
+  filament-test:
     main: Spec.hs
     source-dirs: test
     ghc-options:
       - -threaded
       - -rtsopts
       - -with-rtsopts=-N
+      - -fdefer-typed-holes
     dependencies:
-      - static
+      - filament

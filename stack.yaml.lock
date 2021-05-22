@@ -3,10 +3,83 @@
 # For more information, please see the documentation at:
 #   https://docs.haskellstack.org/en/stable/lock_files
 
-packages: []
+packages:
+- completed:
+    hackage: http2-client-0.10.0.0@sha256:85b8771e9e8d4fd0b4327373ebb4a7bc7f9a293e5d7a7dc581ca4153a841da67,2604
+    pantry-tree:
+      size: 853
+      sha256: 4731a8ea6bc88cd762a99370f71c4754bcb57806844ee57a45d59e114ab1b5cb
+  original:
+    hackage: http2-client-0.10.0.0
+- completed:
+    hackage: proto3-suite-0.4.2@sha256:86ea244011eacdcde0e77181d83183e89c14ae1aba816e1c7df59f9df3195a93,6073
+    pantry-tree:
+      size: 3119
+      sha256: a4d659d1aec53305dcdfa9ebbcf349ff2ef7dbf886015b8c5faf4f19e927d647
+  original:
+    hackage: proto3-suite-0.4.2
+- completed:
+    hackage: proto3-wire-1.2.2@sha256:06cfbd240071099b01c78f90d540a6276e4b40626a97cae9e8668ace5d773864,2756
+    pantry-tree:
+      size: 1009
+      sha256: dd8a00722794fa6aee7e3d3fda5f10f518951664a7f8ae880c7d017599972c5e
+  original:
+    hackage: proto3-wire-1.2.2
+- completed:
+    subdir: http2-client-grpc
+    name: http2-client-grpc
+    version: 0.8.0.0
+    git: git@github.com:ProofOfKeags/http2-grpc-haskell.git
+    pantry-tree:
+      size: 455
+      sha256: 8fd049b4d84ed5ba823d6c676e0269f867386128f9f5c204b31c5795d306dcff
+    commit: 0bedd4acfda825a154f4af8bf1d3ce89067ee986
+  original:
+    subdir: http2-client-grpc
+    git: git@github.com:ProofOfKeags/http2-grpc-haskell.git
+    commit: 0bedd4acfda825a154f4af8bf1d3ce89067ee986
+- completed:
+    subdir: http2-grpc-proto-lens
+    name: http2-grpc-proto-lens
+    version: 0.1.0.0
+    git: git@github.com:ProofOfKeags/http2-grpc-haskell.git
+    pantry-tree:
+      size: 440
+      sha256: 0ebf3d97bef7b573bd2d08e3c9221ba838f4487833f88bae057be6fb947ed6bc
+    commit: 0bedd4acfda825a154f4af8bf1d3ce89067ee986
+  original:
+    subdir: http2-grpc-proto-lens
+    git: git@github.com:ProofOfKeags/http2-grpc-haskell.git
+    commit: 0bedd4acfda825a154f4af8bf1d3ce89067ee986
+- completed:
+    subdir: http2-grpc-proto3-wire
+    name: http2-grpc-proto3-wire
+    version: 0.1.0.1
+    git: git@github.com:ProofOfKeags/http2-grpc-haskell.git
+    pantry-tree:
+      size: 442
+      sha256: a6d6a31d69ca3918b162d94d4a1b4bf4fcbc06a6a9da54f326816fdfee197a44
+    commit: 0bedd4acfda825a154f4af8bf1d3ce89067ee986
+  original:
+    subdir: http2-grpc-proto3-wire
+    git: git@github.com:ProofOfKeags/http2-grpc-haskell.git
+    commit: 0bedd4acfda825a154f4af8bf1d3ce89067ee986
+- completed:
+    subdir: http2-grpc-types
+    name: http2-grpc-types
+    version: 0.5.0.0
+    git: git@github.com:ProofOfKeags/http2-grpc-haskell.git
+    pantry-tree:
+      size: 506
+      sha256: 097a0cdf6259b738fe54507864a390162dc00238d6a7bdcfd4246b7331071dd3
+    commit: 0bedd4acfda825a154f4af8bf1d3ce89067ee986
+  original:
+    subdir: http2-grpc-types
+    git: git@github.com:ProofOfKeags/http2-grpc-haskell.git
+    commit: 0bedd4acfda825a154f4af8bf1d3ce89067ee986
 snapshots:
 - completed:
-    size: 567241
-    url: https://raw.githubusercontent.com/commercialhaskell/stackage-snapshots/master/lts/17/10.yaml
-    sha256: 321b3b9f0c7f76994b39e0dabafdc76478274b4ff74cc5e43d410897a335ad3b
-  original: lts-17.10
+    size: 567672
+    url: https://raw.githubusercontent.com/commercialhaskell/stackage-snapshots/master/lts/17/11.yaml
+    sha256: 03181cdbeb671eb605bbcf6f285bea4d094b6ac7433a0e14a9f1dd54ad995938
+  original: lts-17.11

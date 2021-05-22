@@ -1,16 +1,14 @@
 cabal-version: 2.0
 
--- This file has been generated from package.yaml by hpack version 0.33.0.
+-- This file has been generated from package.yaml by hpack version 0.34.4.
 --
 -- see: https://github.com/sol/hpack
---
--- hash: 45739bbac39a68584eb545b6d5c90657dd11b0c711a9375e6926ac26184024e9
 
-name:           static
+name:           filament
 version:        0.1.0
 description:    A power user toolkit for running a Lightning Network router.
-homepage:       https://github.com/ProofOfKeags/static#readme
-bug-reports:    https://github.com/ProofOfKeags/static/issues
+homepage:       https://github.com/ProofOfKeags/filament#readme
+bug-reports:    https://github.com/ProofOfKeags/filament/issues
 author:         Keagan (ProofOfKeags) McClelland
 maintainer:     keagan.mcclelland@gmail.com
 copyright:      2021 Keagan McClelland, Start9 Labs Inc.
@@ -34,7 +32,7 @@ extra-source-files:
 
 source-repository head
   type: git
-  location: https://github.com/ProofOfKeags/static
+  location: https://github.com/ProofOfKeags/filament
 
 custom-setup
   setup-depends:
@@ -45,6 +43,8 @@ custom-setup
 library
   exposed-modules:
       Lib
+      Lnrpc.ChannelAcceptor
+      Lnrpc.Client
       Proto.Rpc
       Proto.Rpc_Fields
       Proto.Stateservice
@@ -72,7 +72,7 @@ library
       Proto.Wtclientrpc.Wtclient
       Proto.Wtclientrpc.Wtclient_Fields
   other-modules:
-      Paths_static
+      Paths_filament
   autogen-modules:
       Proto.Rpc
       Proto.Rpc_Fields
@@ -102,49 +102,97 @@ library
       Proto.Wtclientrpc.Wtclient_Fields
   hs-source-dirs:
       src
+  default-extensions:
+      NoImplicitPrelude
+      OverloadedStrings
+      RankNTypes
   build-tool-depends:
       proto-lens-protoc:proto-lens-protoc
   build-depends:
-      Cabal
-    , base >=4.7 && <5
+      base >=4.7 && <5
+    , bytestring
+    , data-default-class
+    , http2
+    , http2-client
+    , http2-client-grpc
+    , http2-grpc-proto-lens
+    , http2-grpc-types
+    , lens
+    , memory
     , proto-lens
     , proto-lens-runtime
     , proto-lens-setup
+    , protolude
+    , tls
+    , x509
+    , x509-store
   default-language: Haskell2010
 
-executable static-exe
+executable filament-exe
   main-is: Main.hs
   other-modules:
-      Paths_static
+      Paths_filament
   hs-source-dirs:
       app
-  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  default-extensions:
+      NoImplicitPrelude
+      OverloadedStrings
+      RankNTypes
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N -fdefer-typed-holes
   build-tool-depends:
       proto-lens-protoc:proto-lens-protoc
   build-depends:
-      Cabal
-    , base >=4.7 && <5
+      base >=4.7 && <5
+    , bytestring
+    , data-default-class
+    , filament
+    , http2
+    , http2-client
+    , http2-client-grpc
+    , http2-grpc-proto-lens
+    , http2-grpc-types
+    , lens
+    , memory
     , proto-lens
     , proto-lens-runtime
     , proto-lens-setup
-    , static
+    , protolude
+    , tls
+    , x509
+    , x509-store
   default-language: Haskell2010
 
-test-suite static-test
+test-suite filament-test
   type: exitcode-stdio-1.0
   main-is: Spec.hs
   other-modules:
-      Paths_static
+      Paths_filament
   hs-source-dirs:
       test
-  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  default-extensions:
+      NoImplicitPrelude
+      OverloadedStrings
+      RankNTypes
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N -fdefer-typed-holes
   build-tool-depends:
       proto-lens-protoc:proto-lens-protoc
   build-depends:
-      Cabal
-    , base >=4.7 && <5
+      base >=4.7 && <5
+    , bytestring
+    , data-default-class
+    , filament
+    , http2
+    , http2-client
+    , http2-client-grpc
+    , http2-grpc-proto-lens
+    , http2-grpc-types
+    , lens
+    , memory
     , proto-lens
     , proto-lens-runtime
     , proto-lens-setup
-    , static
+    , protolude
+    , tls
+    , x509
+    , x509-store
   default-language: Haskell2010

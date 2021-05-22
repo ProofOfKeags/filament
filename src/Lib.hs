@@ -1,6 +1,6 @@
+{-# LANGUAGE OverloadedLabels #-}
+{-# LANGUAGE TemplateHaskell #-}
 module Lib
-    ( someFunc
-    ) where
+    () where
 
-someFunc :: IO ()
-someFunc = putStrLn "someFunc"
+import           Data.Word

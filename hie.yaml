@@ -1,13 +1,13 @@
 cradle:
   stack:
     - path: "./src"
-      component: "static:lib"
+      component: "filament:lib"
 
     - path: "./app/Main.hs"
-      component: "static:exe:static-exe"
+      component: "filament:exe:filament-exe"
 
     - path: "./app/Paths_static.hs"
-      component: "static:exe:static-exe"
+      component: "filament:exe:filament-exe"
 
     - path: "./test"
-      component: "static:test:static-test"
+      component: "filament:test:filament-test"
