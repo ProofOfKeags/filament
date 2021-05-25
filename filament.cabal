@@ -3,6 +3,8 @@ cabal-version: 2.0
 -- This file has been generated from package.yaml by hpack version 0.34.4.
 --
 -- see: https://github.com/sol/hpack
+--
+-- hash: eff649878eef6c124d960fd060a7e2b19428321300a374588cb837cf67d3be35
 
 name:           filament
 version:        0.1.0
@@ -43,7 +45,6 @@ custom-setup
 library
   exposed-modules:
       Lib
-      Lnrpc.ChannelAcceptor
       Lnrpc.Client
       Proto.Rpc
       Proto.Rpc_Fields
@@ -112,6 +113,7 @@ library
       base >=4.7 && <5
     , bytestring
     , data-default-class
+    , filepath
     , http2
     , http2-client
     , http2-client-grpc
@@ -146,6 +148,7 @@ executable filament-exe
     , bytestring
     , data-default-class
     , filament
+    , filepath
     , http2
     , http2-client
     , http2-client-grpc
@@ -181,6 +184,7 @@ test-suite filament-test
     , bytestring
     , data-default-class
     , filament
+    , filepath
     , http2
     , http2-client
     , http2-client-grpc

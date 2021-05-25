@@ -8,7 +8,7 @@ extra-deps:
   - proto3-suite-0.4.2
   - proto3-wire-1.2.2
   - git: git@github.com:ProofOfKeags/http2-grpc-haskell.git
-    commit: 0bedd4acfda825a154f4af8bf1d3ce89067ee986
+    commit: 0f1167d9257fd98955cc207adbaa3e8cf17e8db8
     subdirs:
       - http2-client-grpc
       - http2-grpc-proto-lens

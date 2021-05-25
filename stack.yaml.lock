@@ -32,12 +32,12 @@ packages:
     git: git@github.com:ProofOfKeags/http2-grpc-haskell.git
     pantry-tree:
       size: 455
-      sha256: 8fd049b4d84ed5ba823d6c676e0269f867386128f9f5c204b31c5795d306dcff
-    commit: 0bedd4acfda825a154f4af8bf1d3ce89067ee986
+      sha256: 3f1b7ea68caec5c558b12702a3c055f9a5c9fb12796d548b00281b300938728a
+    commit: 0f1167d9257fd98955cc207adbaa3e8cf17e8db8
   original:
     subdir: http2-client-grpc
     git: git@github.com:ProofOfKeags/http2-grpc-haskell.git
-    commit: 0bedd4acfda825a154f4af8bf1d3ce89067ee986
+    commit: 0f1167d9257fd98955cc207adbaa3e8cf17e8db8
 - completed:
     subdir: http2-grpc-proto-lens
     name: http2-grpc-proto-lens
@@ -46,11 +46,11 @@ packages:
     pantry-tree:
       size: 440
       sha256: 0ebf3d97bef7b573bd2d08e3c9221ba838f4487833f88bae057be6fb947ed6bc
-    commit: 0bedd4acfda825a154f4af8bf1d3ce89067ee986
+    commit: 0f1167d9257fd98955cc207adbaa3e8cf17e8db8
   original:
     subdir: http2-grpc-proto-lens
     git: git@github.com:ProofOfKeags/http2-grpc-haskell.git
-    commit: 0bedd4acfda825a154f4af8bf1d3ce89067ee986
+    commit: 0f1167d9257fd98955cc207adbaa3e8cf17e8db8
 - completed:
     subdir: http2-grpc-proto3-wire
     name: http2-grpc-proto3-wire
@@ -59,11 +59,11 @@ packages:
     pantry-tree:
       size: 442
       sha256: a6d6a31d69ca3918b162d94d4a1b4bf4fcbc06a6a9da54f326816fdfee197a44
-    commit: 0bedd4acfda825a154f4af8bf1d3ce89067ee986
+    commit: 0f1167d9257fd98955cc207adbaa3e8cf17e8db8
   original:
     subdir: http2-grpc-proto3-wire
     git: git@github.com:ProofOfKeags/http2-grpc-haskell.git
-    commit: 0bedd4acfda825a154f4af8bf1d3ce89067ee986
+    commit: 0f1167d9257fd98955cc207adbaa3e8cf17e8db8
 - completed:
     subdir: http2-grpc-types
     name: http2-grpc-types
@@ -71,12 +71,12 @@ packages:
     git: git@github.com:ProofOfKeags/http2-grpc-haskell.git
     pantry-tree:
       size: 506
-      sha256: 097a0cdf6259b738fe54507864a390162dc00238d6a7bdcfd4246b7331071dd3
-    commit: 0bedd4acfda825a154f4af8bf1d3ce89067ee986
+      sha256: e3d83b9af4f950f15e00ece249c7396ca7039fdcc708e5b01ae4bb27e2d5f4c8
+    commit: 0f1167d9257fd98955cc207adbaa3e8cf17e8db8
   original:
     subdir: http2-grpc-types
     git: git@github.com:ProofOfKeags/http2-grpc-haskell.git
-    commit: 0bedd4acfda825a154f4af8bf1d3ce89067ee986
+    commit: 0f1167d9257fd98955cc207adbaa3e8cf17e8db8
 snapshots:
 - completed:
     size: 567672
