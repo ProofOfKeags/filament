@@ -124,3 +124,8 @@ newDefaultLnrpcClientFromDir dir = do
         $   dir
         </> "data/chain/bitcoin/regtest/admin.macaroon"
     newLnrpcClient "127.0.0.1" 10009 mac cert
+
+-- short channel id
+-- block = id >> 40
+-- tx = id >> 16 & 0xFFFFFF
+-- output = id & 0xFFFF
