@@ -27,6 +27,7 @@ description: A power user toolkit for running a Lightning Network router.
 
 default-extensions:
   - NoImplicitPrelude
+  - LambdaCase
   - OverloadedStrings
   - RankNTypes
 

@@ -110,9 +110,6 @@ registerBlockEpochNtfn
            (a, HeaderList, HeaderList)
 registerBlockEpochNtfn s = streamReply RPC s defMessage
 
-getInfo :: RPCCall (RPC Lightning "getInfo") (RawReply GetInfoResponse)
-getInfo = singleRequest RPC defMessage
-
 newDefaultLnrpcClientFromDir :: FilePath -> IO LnrpcClient
 newDefaultLnrpcClientFromDir dir = do
     mCert <- readCertificateFile $ dir </> "tls.cert"
