@@ -4,7 +4,7 @@ cabal-version: 2.0
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: a592a1fed7d2d0588fc9787b624499f5bf4c308ef03b1a700850286e3262e65f
+-- hash: f62413fdf47b0d492cdc408b5fc27772dd016eb1d04cb939cbfafbd3abf45c5e
 
 name:           filament
 version:        0.1.0
@@ -47,6 +47,7 @@ library
       Lib
       Lnrpc.BiDiStream
       Lnrpc.Client
+      Lnrpc.Server
       Lnrpc.Single
       Proto.Rpc
       Proto.Rpc_Fields
