@@ -1,12 +1,19 @@
-resolver: lts-17.11
+resolver: lts-18.0
 
 packages:
   - .
 
 extra-deps:
+  - free-5.1.5
+  - http2-2.0.6
   - http2-client-0.10.0.0
+  - profunctors-5.5.2
   - proto3-suite-0.4.2
   - proto3-wire-1.2.2
+  - proto-lens-0.7.0.0
+  - proto-lens-protoc-0.7.0.0
+  - proto-lens-runtime-0.7.0.0
+  - proto-lens-setup-0.4.0.4
   - git: git@github.com:ProofOfKeags/http2-grpc-haskell.git
     commit: 0f1167d9257fd98955cc207adbaa3e8cf17e8db8
     subdirs:
