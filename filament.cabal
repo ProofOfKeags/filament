@@ -4,7 +4,7 @@ cabal-version: 2.0
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: f62413fdf47b0d492cdc408b5fc27772dd016eb1d04cb939cbfafbd3abf45c5e
+-- hash: db5c5e39da451ded18a1675a7d221ecff65130132feb2f3badfb6de2b621fc7e
 
 name:           filament
 version:        0.1.0
@@ -48,6 +48,17 @@ library
       Lnrpc.BiDiStream
       Lnrpc.Client
       Lnrpc.Server
+      Lnrpc.Services.ChainNotifier
+      Lnrpc.Services.Invoices
+      Lnrpc.Services.Lightning
+      Lnrpc.Services.Router
+      Lnrpc.Services.Signer
+      Lnrpc.Services.State
+      Lnrpc.Services.Versioner
+      Lnrpc.Services.WalletKit
+      Lnrpc.Services.WalletUnlocker
+      Lnrpc.Services.Watchtower
+      Lnrpc.Services.WatchtowerClient
       Lnrpc.Single
       Proto.Rpc
       Proto.Rpc_Fields

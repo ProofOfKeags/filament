@@ -1,0 +1,21 @@
+module Lnrpc.Services.WalletKit where
+
+bumpFee = _
+deriveKey = _
+deriveNextKey = _
+estimateFee = _
+finalizePsbt = _
+fundPsbt = _
+importAccount = _
+importPublicKey = _
+labelTransaction = _
+leaseOutput = _
+listAccounts = _
+listLeases = _
+listSweeps = _
+listUnspent = _
+nextAddr = _
+pendingSweeps = _
+publishTransaction = _
+releaseOutput = _
+sendOutputs = _
