@@ -11,9 +11,12 @@ import           Proto.Rpc                      ( AbandonChannelRequest
                                                 , ChannelAcceptRequest
                                                 , ChannelAcceptResponse
                                                 , ChannelBackup
+                                                , ChannelBackupSubscription
                                                 , ChannelBalanceRequest
                                                 , ChannelBalanceResponse
                                                 , ChannelEdge
+                                                , ChannelEventSubscription
+                                                , ChannelEventUpdate
                                                 , ChannelGraph
                                                 , ChannelGraphRequest
                                                 , ChannelPoint
@@ -45,7 +48,10 @@ import           Proto.Rpc                      ( AbandonChannelRequest
                                                 , GetRecoveryInfoRequest
                                                 , GetRecoveryInfoResponse
                                                 , GetTransactionsRequest
+                                                , GraphTopologySubscription
+                                                , GraphTopologyUpdate
                                                 , Invoice
+                                                , InvoiceSubscription
                                                 , ListChannelsRequest
                                                 , ListChannelsResponse
                                                 , ListInvoiceRequest
@@ -73,8 +79,12 @@ import           Proto.Rpc                      ( AbandonChannelRequest
                                                 , PayReq
                                                 , PayReqString
                                                 , PaymentHash
+                                                , PeerEvent
+                                                , PeerEventSubscription
                                                 , PendingChannelsRequest
                                                 , PendingChannelsResponse
+                                                , PolicyUpdateRequest
+                                                , PolicyUpdateResponse
                                                 , QueryRoutesRequest
                                                 , QueryRoutesResponse
                                                 , RestoreBackupResponse
@@ -86,7 +96,17 @@ import           Proto.Rpc                      ( AbandonChannelRequest
                                                 , SendRequest
                                                 , SendResponse
                                                 , SendToRouteRequest
+                                                , SignMessageRequest
+                                                , SignMessageResponse
+                                                , StopRequest
+                                                , StopResponse
+                                                , Transaction
                                                 , TransactionDetails
+                                                , VerifyChanBackupResponse
+                                                , VerifyMessageRequest
+                                                , VerifyMessageResponse
+                                                , WalletBalanceRequest
+                                                , WalletBalanceResponse
                                                 )
 import           Protolude
 
@@ -225,16 +245,41 @@ sendPayment = _
 sendPaymentSync :: SendRequest -> IO SendResponse
 sendPaymentSync = _
 
+sendToRouteSync :: SendToRouteRequest -> IO SendResponse
 sendToRouteSync = _
+
+signMessage :: SignMessageRequest -> IO SignMessageResponse
 signMessage = _
+
+stopDaemon :: StopRequest -> IO StopResponse
 stopDaemon = _
+
+subscribeChannelBackups :: ChannelBackupSubscription -> (ChanBackupSnapshot -> IO ()) -> IO ()
 subscribeChannelBackups = _
+
+subscribeChannelEvents :: ChannelEventSubscription -> (ChannelEventUpdate -> IO ()) -> IO ()
 subscribeChannelEvents = _
+
+subscribeChannelGraph :: GraphTopologySubscription -> (GraphTopologyUpdate -> IO ()) -> IO ()
 subscribeChannelGraph = _
+
+subscribeInvoices :: InvoiceSubscription -> (Invoice -> IO ()) -> IO ()
 subscribeInvoices = _
+
+subscribePeerEvents :: PeerEventSubscription -> (PeerEvent -> IO ()) -> IO ()
 subscribePeerEvents = _
+
+subscribeTransactions :: GetTransactionsRequest -> (Transaction -> IO ()) -> IO ()
 subscribeTransactions = _
+
+updateChannelPolicy :: PolicyUpdateRequest -> IO PolicyUpdateResponse
 updateChannelPolicy = _
+
+verifyChanBackup :: ChanBackupSnapshot -> IO VerifyChanBackupResponse
 verifyChanBackup = _
+
+verifyMessage :: VerifyMessageRequest -> IO VerifyMessageResponse
 verifyMessage = _
+
+walletBalance :: WalletBalanceRequest -> IO WalletBalanceResponse
 walletBalance = _
